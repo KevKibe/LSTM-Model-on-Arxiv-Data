@@ -1,5 +1,5 @@
-# ML-Paper-Recommendation-App
-This is a project that aims to provide the user access to papers on Machine Learning through key word search. The user provides a topic as a query and gets an output of the title and paper summary of the query.<br>
+# Description
+This is a project that aims to use an LSTM model to autocomplete a title of one of the ML papers in the Arxiv database from the user input.<br>
 
 # Data
 The data used in this project is from https://www.kaggle.com/datasets/spsayakpaul/arxiv-paper-abstracts<br>
