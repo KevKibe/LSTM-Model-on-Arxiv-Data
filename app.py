@@ -29,7 +29,7 @@ def generate_text(model, tokenizer, input_text, max_length=20):
             generated_text += ' ' + predicted_word
     return generated_text.strip()
 
-with open('/content/lstm_tokenizer.json', 'r') as f:
+with open('model/lstm_tokenizer.json', 'r') as f:
     data = json.load(f)
     tokenizer_json = json.dumps(data)  # Convert dictionary to JSON-formatted string
     tokenizer = tokenizer_from_json(tokenizer_json)
