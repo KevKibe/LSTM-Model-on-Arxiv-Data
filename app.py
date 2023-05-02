@@ -29,27 +29,17 @@ def generate_text(model, tokenizer, input_text, max_length=20):
             generated_text += ' ' + predicted_word
     return generated_text.strip()
 
-def main():
-    # load the tokenizer
-    with open('/content/lstm_tokenizer.json', 'r') as f:
-        data = json.load(f)
-        tokenizer_json = json.dumps(data)  # Convert dictionary to JSON-formatted string
-        tokenizer = tokenizer_from_json(tokenizer_json)
 
-    # load the model
-    model = tf.keras.models.load_model(' ')
 
     # create the Streamlit app
-    st.title('LSTM Text Generation')
-    input_text = st.text_input('Enter the seed text:', 'ensemble learning based')
-    max_length = st.slider('Select the maximum length of the generated text:', 5, 50, 20)
-    generate_button = st.button('Generate Text')
+st.title('LSTM Text Generation')
+input_text = st.text_input('Enter the seed text:', 'ensemble learning based')
+max_length = st.slider('Select the maximum length of the generated text:', 5, 50, 20)
+generate_button = st.button('Generate Text')
 
     # generate text when the button is clicked
-    if generate_button:
-        generated_text = generate_text(model, tokenizer, input_text, max_length=max_length)
-        st.write('Generated Text:', generated_text)
+if generate_button:
+    generated_text = generate_text(model, tokenizer, input_text, max_length=max_length)
+    st.write('Generated Text:', generated_text)
 
-if __name__ == '__main__':
-    main()
 
