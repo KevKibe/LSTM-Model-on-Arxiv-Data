@@ -1,2 +1,4 @@
-tensorflow
-keras
+tensorflow==2.6.0
+keras==2.6.0
+numpy 
+json
