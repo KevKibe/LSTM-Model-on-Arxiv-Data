@@ -40,7 +40,7 @@ model = tf.keras.models.load_model('model/lstm_model_4.h5')
 
     # create the Streamlit app
 st.title('LSTM Text Generation')
-input_text = st.text_input('Enter the seed text:', 'ensemble learning based')
+input_text = st.text_input('Enter the seed text:')
 max_length = st.slider('Select the maximum length of the generated text:', 5, 50, 20)
 generate_button = st.button('Generate Text')
 
