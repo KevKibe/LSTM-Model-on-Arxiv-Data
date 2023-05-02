@@ -29,6 +29,13 @@ def generate_text(model, tokenizer, input_text, max_length=20):
             generated_text += ' ' + predicted_word
     return generated_text.strip()
 
+    with open('/content/lstm_tokenizer.json', 'r') as f:
+        data = json.load(f)
+        tokenizer_json = json.dumps(data)  # Convert dictionary to JSON-formatted string
+        tokenizer = tokenizer_from_json(tokenizer_json)
+
+    # load the model
+    model = tf.keras.models.load_model('model/lstm_model_4.h5')
 
 
     # create the Streamlit app
