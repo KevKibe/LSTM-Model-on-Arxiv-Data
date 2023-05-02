@@ -1,5 +1,5 @@
-pip==23.1.2
-tensorflow==2.6.0
-keras==2.6.0
+pip
+tensorflow
+keras
 numpy 
 json
