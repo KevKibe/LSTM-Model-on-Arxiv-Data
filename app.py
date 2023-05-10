@@ -34,16 +34,18 @@ with open('model/lstm_tokenizer.json', 'r') as f:
     tokenizer_json = json.dumps(data)  # Convert dictionary to JSON-formatted string
     tokenizer = tokenizer_from_json(tokenizer_json)
 
-# load the model
+    # load the mode
 model = tf.keras.models.load_model('model/lstm_model_4.h5')
 
-# create the Streamlit app
+
+    # create the Streamlit app
 st.title('LSTM Text Generation')
-input_text = st.text_input('Enter the seed text:', key='input_text')
+input_text = st.text_input('Enter the seed text:')
 max_length = st.slider('Select the maximum length of the generated text:', 5, 50, 20)
 generate_button = st.button('Generate Text')
 
-# generate text when the button is clicked or when the input text changes
-if generate_button or st.session_state.input_text:
+    # generate text when the button is clicked
+if generate_button:
     generated_text = generate_text(model, tokenizer, input_text, max_length=max_length)
     st.write('Generated Text:', generated_text)
+
