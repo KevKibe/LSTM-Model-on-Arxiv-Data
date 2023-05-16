@@ -1,5 +1,5 @@
 # Description
-This is a project that aims to use an LSTM model to autocomplete titles of some sampled(1000) ML papers in the Arxiv database from the user input.<br>
+This is an implementation of an LSTM model to autocomplete titles of some sampled(1000) ML papers in the Arxiv database from the user input.<br>
 
 # Data
 The data used in this project is from https://www.kaggle.com/datasets/spsayakpaul/arxiv-paper-abstracts<br>
